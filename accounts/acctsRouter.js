@@ -61,7 +61,7 @@ router.post("/", (req, res) => {
         });
 });
 
-router.put("/:id", accountValidation, (req, res) => {
+router.put("/:id", (req, res) => {
     const { id } = req.params;
     const changes = req.body;
 
@@ -99,8 +99,8 @@ router.delete("/:id", (req, res) => {
         });
 });
 
-function accountValidation({ name }) {
-    return name
-}
+// function accountValidation({ name }) {
+//     return name
+// }
 
 module.exports = router;
